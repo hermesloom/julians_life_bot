@@ -6,4 +6,4 @@ To install dependencies:
 bun install
 ```
 
-This project was created using `bun init` in bun v1.3.0. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+For setup on Vercel, please follow the instructions here: https://grammy.dev/hosting/vercel
