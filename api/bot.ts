@@ -13,7 +13,7 @@ bot.command("start", (ctx) => {
 bot.on("message", (ctx) => {
   const newCtx = JSON.parse(JSON.stringify(ctx));
   delete newCtx.api;
-  ctx.reply(JSON.stringify(ctx, null, 2));
+  ctx.reply(JSON.stringify(newCtx, null, 2));
 });
 
 export default webhookCallback(bot, "https");
