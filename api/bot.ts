@@ -11,14 +11,7 @@ bot.command("start", (ctx) => {
 });
 
 bot.on("message", (ctx) => {
-  // reverse the message
-  const message = ctx.message.text;
-  if (!message) {
-    ctx.reply("Please send a message to reverse");
-    return;
-  }
-  const reversedMessage = message.split("").reverse().join("");
-  ctx.reply(reversedMessage);
+  ctx.reply(JSON.stringify(ctx, null, 2));
 });
 
 export default webhookCallback(bot, "https");
