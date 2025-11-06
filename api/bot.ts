@@ -11,6 +11,8 @@ bot.command("start", (ctx) => {
 });
 
 bot.on("message", (ctx) => {
+  const newCtx = JSON.parse(JSON.stringify(ctx));
+  delete newCtx.api;
   ctx.reply(JSON.stringify(ctx, null, 2));
 });
 
